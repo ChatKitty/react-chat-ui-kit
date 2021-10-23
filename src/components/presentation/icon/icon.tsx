@@ -4,6 +4,7 @@ import { color } from 'styled-system';
 
 import { ReactComponent as Add } from '../../../svg/add.svg';
 import { ReactComponent as Back } from '../../../svg/back.svg';
+import { ReactComponent as Call } from '../../../svg/call.svg';
 import { ReactComponent as Cross } from '../../../svg/cross.svg';
 import { ReactComponent as Emoji } from '../../../svg/emoji.svg';
 import { ReactComponent as Giphy } from '../../../svg/giphy.svg';
@@ -22,6 +23,7 @@ interface IconWrapperProps {
 export enum Icons {
   Add = 'Add',
   Back = 'Back',
+  Call = 'Call',
   Cross = 'Cross',
   Emoji = 'Emoji',
   Giphy = 'Giphy',
@@ -44,6 +46,7 @@ const IconComponents: {
 } = {
   Add,
   Back,
+  Call,
   Cross,
   Emoji,
   Giphy,

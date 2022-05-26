@@ -1,5 +1,6 @@
 import emojiRegex from 'emoji-regex';
 import React from 'react';
+import Linkify from 'react-linkify';
 import Styled, { css } from 'styled-components/macro';
 
 export enum TextMessageSizes {
@@ -53,11 +54,13 @@ export const TextMessage: React.FC<TextMessageProps> = ({
   ...rest
 }: TextMessageProps) => {
   return (
-    <Wrapper
-      size={size || (isEmphasized(text) ? TextMessageSizes.BIG : undefined)}
-      {...rest}
-    >
-      {text}
-    </Wrapper>
+    <Linkify>
+      <Wrapper
+        size={size || (isEmphasized(text) ? TextMessageSizes.BIG : undefined)}
+        {...rest}
+      >
+        {text}
+      </Wrapper>
+    </Linkify>
   );
 };
